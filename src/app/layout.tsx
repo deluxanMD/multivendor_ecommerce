@@ -32,7 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      allowedRedirectOrigins={[
+        "https://nonephemeral-malinda-cylinderlike.ngrok-free.dev",
+        "http://localhost:3000",
+      ]}
+    >
       <html
         lang="en"
         className={cn("h-full", "antialiased", "font-sans", geist.variable)}
